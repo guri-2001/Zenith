@@ -131,7 +131,7 @@ export default function ActiveClients() {
   }
 
   const getPaginatedUsers = async () => {
-    const result = await axios.get(`${process.env.REACT_APP_URL}/paginatedUsers?page=${currentPage.current}&limit=${limit}&search=${searchQuery}`);
+    const result = await axios.get(`https://zenith-e2yy.onrender.com/paginatedUsers?page=${currentPage.current}&limit=${limit}&search=${searchQuery}`);
     console.log(result);
     setAllUsers(result.data.result);
     setPageCount(result.data.pageCount);
