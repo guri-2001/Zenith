@@ -6,7 +6,10 @@ const router = require('./routes/router')
 
 app.use(express.json());
 const cors = require("cors");
-app.use(cors());
+app.use(cors({
+  origin: "https://zenith-green.vercel.app",
+  credentials: true
+            ));
 app.use(router);
 
 const Port = process.env.PORT || 5000
