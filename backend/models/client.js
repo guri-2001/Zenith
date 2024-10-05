@@ -25,7 +25,7 @@ const ClientDetailsScehma = new mongoose.Schema({
     },
     image: {
         type: String,
-        default: '/images/profile.png', 
+        
     },
     fees: {
         type: String,
