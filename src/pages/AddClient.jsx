@@ -125,7 +125,7 @@ export default function AddClient() {
     formData.append("checkedValues", JSON.stringify(checkedValues));
 
     await axios.post(
-      `${process.env.REACT_APP_URL}/addClient`,
+      `https://zenith-e2yy.onrender.com/addClient`,
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
