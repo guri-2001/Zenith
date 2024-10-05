@@ -9,6 +9,7 @@ const cors = require("cors");
 app.use(cors());
 app.use(router);
 
+const PORT = process.env.PORT || 5000
 
 //mongodb connection
 const mongoUrl = process.env.MONGODB_URL
@@ -27,7 +28,7 @@ app.get("/", async (req, res) => {
   res.json({ message: "Success!!!!!!" });
 });
 
-app.listen(5000, () => {
+app.listen(PORT, () => {
   console.log("Server Started");
 });
 
