@@ -14,7 +14,7 @@ const cron = require('node-cron');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, "../src/images/");
+        cb(null, "https://zenith-green.vercel.app/addclients/src/images/");
     },
     filename: function (req, file, cb) {
         const uniqueSuffix = Date.now();
