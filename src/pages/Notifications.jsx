@@ -102,7 +102,7 @@ export default function Notifications() {
     const fetchBirthdays = async () => {
         // setLoading(true);
         try {
-            const response = await fetch(`${process.env.REACT_APP_URL}/api/notifications`, { method: 'POST' });
+            const response = await fetch(`${process.env.REACT_APP_URL}/notifications`, { method: 'POST' });
             const data = await response.json();
             setNotifications(data);
         } catch (error) {
