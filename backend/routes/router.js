@@ -210,7 +210,7 @@ cron.schedule('*/10 * * * * *', () => {
 });
 
 
-router.post('/api/notifications', async (req, res) => {
+router.post('/notifications', async (req, res) => {
     try {
         const birthdays = await checkBirthdays();
         res.json(birthdays);
@@ -297,7 +297,7 @@ cron.schedule('*/10 * * * * *', async () => {
 const getUpcomingBirthdayUsers = () => upcomingBirthdayUsers;
 
 // Define an API route to get users with birthdays in 7 days
-router.get('/api/upcoming-birthday-users', (req, res) => {
+router.get('/upcoming-birthday-users', (req, res) => {
     const users = getUpcomingBirthdayUsers();
     res.json(users);
 });
@@ -343,7 +343,7 @@ const checkUsersBirthdays = async () => {
 checkUsersBirthdays();
 
 // API endpoint to serve today's birthdays to the frontend
-router.get('/api/birthdays', (req, res) => {
+router.get('/birthdays', (req, res) => {
     res.json(todaysBirthdays);
 });
 
