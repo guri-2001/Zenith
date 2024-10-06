@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(cors({
   origin: "https://zenith-green.vercel.app",
   optionsSuccessStatus: 200,
-  credentials: true
+  credentials: true,
             ));
 app.use(router);
 
