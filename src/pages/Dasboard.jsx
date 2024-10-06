@@ -105,7 +105,7 @@ export default function Dasboard() {
 
   useEffect(() => {
     // Fetch the upcoming birthday users from the backend
-    fetch(`${process.env.REACT_APP_URL}/api/upcoming-birthday-users`)
+    fetch(`${process.env.REACT_APP_URL}/upcoming-birthday-users`)
       .then((response) => response.json())
       .then((data) => {
         setUpcomingBirthdayUsers(data);
@@ -170,7 +170,7 @@ export default function Dasboard() {
 
   useEffect(() => {
     // Fetch the data from the backend
-    fetch(`${process.env.REACT_APP_URL}/api/birthdays`)
+    fetch(`${process.env.REACT_APP_URL}/birthdays`)
       .then(response => response.json())
       .then(data => setBirthdays(data))
       .catch(error => console.error('Error fetching birthdays:', error));
